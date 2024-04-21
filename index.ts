@@ -10,7 +10,7 @@ const PORT: number = 8000;
 app.set('view engine', 'pug');
 app.set('views', './views');
 // ? Public path
-path.join(__dirname, './public');
+app.use(express.static(`${__dirname}/public`));
 // ? Config
 dotenv.config();
 database.connect();
