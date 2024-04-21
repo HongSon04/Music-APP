@@ -1,0 +1,27 @@
+extends ../../layouts/default.pug
+include ../../mixins/box-head.pug
+
+block main
+  .container.my-3 
+    .row 
+      .col-12 
+        +box-head('Chủ đề bài hát')
+        .row
+            each song in songs 
+              .col-6.mb-3
+                .card
+                  .col-12.d-flex
+                    .col-4 
+                      a(href=`/songs/detail/${song.slug}`) 
+                        img.card-img-top(src=song.avatar, alt="Card image cap")
+                    .col-8
+                      .card-body
+                        h5.card-title 
+                          a(href=`/songs/${song.slug}`) 
+                            | #{song.title}
+                        p.card-text.inner-singer
+                          | #{song.infoSinger.fullName}
+                        p.card-text.inner-like
+                          | #{song.like} lượt thích
+                        p.card-text.inner-time
+                          | #{song.createdAt} Hôm Nay
