@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // ? Cho phép biên dịch code typescript về ES6
+    "module": "commonjs", // ? Là tiêu chuẩn module mà NodeJS sử dụng
+    "removeComments": true, // ? Xóa các comment trong code
+    "esModuleInterop": true, // ? Dùng được cú pháp import/export
+    "outDir": "dist", // ? Thư mục chứa file sau khi biên dịch
+  }
+}
